@@ -1,0 +1,36 @@
+// VARIABLES FREQUENTLY CHANGED
+:revnumber: 1.0.0
+
+// ASCIIDOCTOR VARIABLES
+:author: Alvin Berthelot
+:email: alvin.berthelot@webyousoon.com
+:source-highlighter: coderay
+:title-logo-image: image:content/img/js.png[width=100%, scaledwidth=25%, align=left]
+:icons: font
+:doctype: book
+:compat-mode:
+:experimental:
+:pygments-style: bw
+
+// CUSTOM VARIABLES
+:nameRepository: slides-js-testing
+:urlRepository: https://github.com/alvinberthelot/slides-js-testing
+
+
+= Les tests en JavaScript
+{author}
+
+<<<
+include::intro-license.adoc[]
+
+<<<
+include::content/partials/why-testing.adoc[]
+
+<<<
+include::content/partials/specific-js.adoc[]
+
+<<<
+include::content/partials/the-end.adoc[]
+
+<<<
+include::license.adoc[]
