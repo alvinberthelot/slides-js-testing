@@ -1,0 +1,16 @@
+== Bilan
+
+Ce n'est qu'un rapide panorama des outils et pratiques, il n'y a pas de chemin tout tracé, *c'est à vous de réflechir sur le ROI* (tests manuels Vs tests automatisés).
+
+Garder toujours en tête ce tryptique : *RAPIDE ? FACILE ? PRÉDICTIBLE ?*, car c'est votre fil conducteur pour vos tests mais aussi (voir surtout) pour votre code.
+
+Bien évidemment il faudra mettre ça dans une *intégration continue* : https://jenkins.io/[Jenkins], https://travis-ci.org/[Travis].
+
+<<<
+
+== MERCI !
+
+image::content/img/meme-faces/meme-face-smile.png[width=100%, scaledwidth=40%, align=center]
+
+<<<
+

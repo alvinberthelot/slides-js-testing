@@ -1,0 +1,44 @@
+== Les tests ... pourquoi déjà ?
+
+image::content/img/meme-faces/meme-face-suspicious.png[width=100%, scaledwidth=30%, align=right]
+
+<<<
+
+=== Définition d'un test
+
+Un test correspond à la *validation d'un comportement attendu*.
+
+Pour être efficace et efficient :
+
+- Un test doit être *RAPIDE* à s'exécuter.
+
+- Un test doit être *FACILE* à comprendre.
+
+- Un test doit être isolé, bref *PRÉDICTIBLE*.
+
+<<<
+
+=== Bénéfices de l'éxécution des tests
+
+*S'assurer de la non régression* d'une application si celle-ci s'enrichit de fonctionnalités ou est refactorée.
+
+Doit permettre de tester de *multiples environnements d'exécution*.
+
+Doit permettre de *vérifier la couverture du code et de sa lisibilité*.
+
+=== Bénéfices de l'écriture des tests
+
+Peut servir de *documentation sur les objectifs attendus* de l'application.
+
+Peut *guider dans le développement d'un algorithme*.
+
+S'apercevoir qu'il est difficile d'écrire un test, c'est déjà *s'apercevoir d'un "Code smell"*.
+
+<<<
+
+=== 5 fruits et légumes par jour
+
+image::content/img/meme-faces/meme-face-dude-come-on.png[width=100%, scaledwidth=50%, align=right]
+
+<<<
+

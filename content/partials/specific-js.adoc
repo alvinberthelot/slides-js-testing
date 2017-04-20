@@ -1,0 +1,135 @@
+== Et JavaScript ?
+
+image::content/img/js.png[width=100%, scaledwidth=50%, align=right]
+
+<<<
+
+=== S'essayer aux tests ... en JavaScript
+
+S'essayer aux tests, c'est déjà comprendre le jargon associé :
+
+- Types de test : *test unitaire*, *test d'intégration*, *test E2E* ("end-to-end").
+
+- Analyse de la *qualité du code* et la *couverture du code* testé.
+
+- *Savoir faire semblant* : "Spies", "Stubs", "Mocks".
+
+Si en plus on est dans l'univers de JavaScript :
+
+- Ce *langage si permissif*.
+
+- Vive les *environnements d'exécution* !
+
+- La *multitude des micro-librairies*.
+
+<<<
+
+=== Restons pragmatique
+
+On fait quoi avec JavaScript aujourd'hui ?
+
+Il y a de forte de chance de vous retrouver dans un de ces 3 cas de figure, votre travail c'est de :
+
+1. *Développer une application front-end*.
+
+2. *Développer une application back-end*.
+
+3. *Développer une librairie*.
+
+image::content/img/meme-faces/meme-face-hehehe.png[width=100%, scaledwidth=15%, align=right]
+
+<<<
+
+=== Tester une librairie, cas simple
+
+Une librairie au fond c'est une multitude de fonctions. *Une (bonne) fonction en soit c'est très simple à tester*.
+
+Il faut juste *lancer des tests* et *vérifier que les résultats obtenus sont les bons*.
+
+Bref il vous faut un "runner" et une librairie d'assertion. Les 2 options les plus répandues :
+
+- https://jasmine.github.io/[*Jasmine*] fait les 2 à la fois.
+
+- https://mochajs.org/[*Mocha*] et http://chaijs.com/[*Chai*] est un super combo.
+
+image::content/img/meme-faces/meme-face-little-kid.png[width=100%, scaledwidth=15%, align=right]
+
+<<<
+
+=== Tester une librairie, cas plus complexe
+
+Ok mais ce fameux *problème des différents environnements d'exécution* ?
+
+Côté back-end, c'est du https://nodejs.org/en/[Node.js] pas de recette miracle, il vous faudra plusieurs versions et les lancer sur chaque version.
+
+Côté front-end, c'est le "runner" https://karma-runner.github.io[*Karma*] qui va s'occuper de lancer Chrome, Firefox, etc. et de lancer vos tests ... toujours pas de recette miracle, il vous faudra plusieurs navigateurs et plusieurs versions.
+
+*RAPIDE ? FACILE ? PRÉDICTIBLE ?*
+
+image::content/img/meme-faces/meme-face-questionning.png[width=100%, scaledwidth=15%, align=right]
+
+<<<
+
+=== Tester une application back-end, cas simple
+
+Un back-end au fond ce sont des *services auxquels on peut accéder à distance* (en général via HTTP) et qui ont *des effets de bord* (en général une base de données).
+
+Bref il vous faut une librairie de requêtage HTTP en plus. Les 2 options les plus répandues :
+
+- https://visionmedia.github.io/superagent/[SuperAgent].
+
+- https://github.com/visionmedia/supertest[supertest].
+
+image::content/img/meme-faces/meme-face-little-kid.png[width=100%, scaledwidth=15%, align=right]
+
+<<<
+
+=== Tester une application back-end, cas plus complexe
+
+Ok mais ces fameux *effets de bord* ?
+
+Si lancer des tests dans un contexte particulier ou ayant des effets de bord n'est pas quelque chose de douloureux, alors autant faire avec, c'est plus réaliste.
+
+Sinon et bien il faut utiliser http://sinonjs.org/[Sinon.js] qui va savoir faire semblant et simuler un contexte et les effets de bord associés afin de mieux isoler votre test.
+
+*RAPIDE ? FACILE ? PRÉDICTIBLE ?*
+
+image::content/img/meme-faces/meme-face-questionning.png[width=100%, scaledwidth=15%, align=right]
+
+<<<
+
+=== Tester une application front-end
+
+Soit vous voulez tester des "composants" isolés/isolables : composant graphique, service, modules, etc. et du coup à peu de choses près vous allez retomber sur les mêmes démarches que pour tester une librairie ou un back-end.
+
+Soit vous voulez tester les comportements d'un point de vue purement IHM : événements, modification du contenu HTML.
+Là vous allez devoir utiliser http://www.seleniumhq.org/[Selenium], euh non pardon je voulais dire http://www.protractortest.org/#/[Protractor].
+
+La question du E2E va arriver, dois-je tester mon application de bout en bout ?
+
+*RAPIDE ? FACILE ? PRÉDICTIBLE ?*
+
+image::content/img/meme-faces/meme-face-questionning.png[width=100%, scaledwidth=14%, align=right]
+
+<<<
+
+=== La pyramide de tests de Mike Cohn
+
+image::content/img/test_pyramid.png[width=100%, scaledwidth=60%, align=center]
+
+<<<
+
+=== Qualité et couverture du code
+
+C'est déjà un bon panorama : Mocha, Chai, Karma, SuperAgent, Sinon, Protractor.
+
+Sauf que je n'ai pas trop abordé la qualité et la couverture du code ...
+
+Pour la qualité, *un linter*, genre http://eslint.org/[ESLint].
+
+Pour la couverture du code, *un reporter*, genre https://istanbul.js.org/[Istanbul].
+
+Là pour le coup *pas besoin de réflechir c'est RAPIDE, FACILE, PRÉDICTIBLE*.
+
+image::content/img/meme-faces/meme-face-happy.png[width=100%, scaledwidth=14%, align=right]
+
